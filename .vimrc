@@ -1,0 +1,1 @@
+/home/dtouch3d/.vimrc
