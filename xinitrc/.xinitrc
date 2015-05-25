@@ -1,32 +1,22 @@
-#!/bin/sh
-#
-# ~/.xinitrc
-#
-# Executed by startx
+#!/usr/bin/env bash
 
-#feh --no-xinerama --bg-center /D/Dropbox/Photos/mountain_moon.jpg
-#feh --bg-fill /D/Dropbox/Photos/tenacity.png &
-#feh --bg-center /D/Dropbox/Photos/dream_dark.png
-feh --bg-fill /D/Dropbox/Photos/DeathDying_TheSeventhSeal.jpg &
-#redshift -l 40.65:22.9 -t 5600:5000 -b 0.7 &
-
-# Toggle greek with alt+space, set caps lock as control key when pressed once
-setxkbmap us,el -option 'grp:lwin_toggle,ctrl:nocaps' &
-# escape
+# Map Caps Lock to Ctrl when holded, Esc when pressed
+setxkbmap -layout us,gr -option 'grp:alt_shift_toggle,ctrl:nocaps' &
 xcape &
 
-autocutsel -fork &
-autocutsel -selection PRIMARY -fork &
+# Memento Mori
+feh --bg-fill Dropbox/Photos/DeathDying_TheSeventhSeal.jpg &
 
-xsetroot -cursor_name left_ptr &
-xset +fp /usr/share/fonts/local/
+~/src/suckless/dwm-6.0/dwm-statusbar.sh &
 
-hdparm -S 255 /dev/sda
-hdparm -B 255 /dev/sda
+# dropbox start &
 
-#xscreensaver -no-splash &
-/home/dtouch3d/src/suckless/dwm-6.0/dwm-statusbar.sh &
+# this will keep the primary in sync
+# with the clipboard buffer
 
-dropbox start &
+autocutsel -selection CLIPBOARD -fork
+autocutsel -selection PRIMARY -fork
+
+~/src/artproject/artproject.sh &
 
 exec dwm
