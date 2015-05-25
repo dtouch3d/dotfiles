@@ -1,0 +1,10 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+        co = checkout
+	dh = diff HEAD
+	dstash = stash show -p stash@{0}
+[user]
+	email = dtouch3d@gmail.com
+	name = Dimitrios Tatsis
+[push]
+	default = simple

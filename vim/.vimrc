@@ -18,6 +18,7 @@ Bundle 'fatih/vim-go'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'esneider/YUNOcommit.vim'
+Bundle 'zah/nimrod.vim.git'
 "Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on

@@ -97,6 +97,8 @@ export CHROMIUM_FLAGS="--ssl-version-min=tls1"
 
 . /usr/share/autojump/autojump.sh
 
+alias 'mountcd'='sudo mount /dev/sr0 /mnt'
+alias 'umountcd'='sudo umount /dev/sr0 /mnt'
 
 export PATH=$PATH:/opt/oracle/instantclient_12_1
 eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
@@ -105,4 +107,6 @@ export SSH_AUTH_SOCK
 export FLEX_SDK_HOME=/opt/flex
 alias mxmlc='java -jar "$FLEX_SDK_HOME/lib/mxmlc.jar" +flexlib="$FLEX_SDK_HOME/frameworks" "$@"'
 
+export PATH=$PATH:/home/dtouch3d/src/Nim/bin
+export PATH=$PATH:/home/dtouch3d/.nimble/bin
 export GOPATH='/home/dtouch3d/gocode'
